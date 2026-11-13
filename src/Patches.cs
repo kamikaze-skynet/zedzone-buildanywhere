@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 using HarmonyLib;
+using UnityEngine;
 
 namespace BuildAnywhere
 {
@@ -51,11 +52,44 @@ namespace BuildAnywhere
         // Logged once per kind so the log shows the mod actually stepped in.
         static bool _saidObject, _saidLevel, _saidWall, _saidHorde;
 
-        static void CanPlacePostfix(ref bool __result)
+        static void CanPlacePostfix(TerrainObject __instance, ref bool __result)
         {
             if (__result || !Plugin.Enabled.Value || !Plugin.ObjectsIgnoreObstacles.Value) return;
+            if (!Plugin.ObjectsAllowStacking.Value && OverlapsOtherObject(__instance)) return;
             __result = true;
             if (!_saidObject) { _saidObject = true; BLog.Info("object placement check overridden (first time this session)"); }
+        }
+
+        // The same box test the game's CanPlace does (its own check box, centered on the
+        // object, against blockLayerMask, skipping its own collider, ignored colliders
+        // and hollow triggers), but only counting hits that belong to another built
+        // object. Walls, trees and the rest stay ignored.
+        static bool OverlapsOtherObject(TerrainObject self)
+        {
+            try
+            {
+                if (self == null) return false;
+                self.GetPlaceCheckBox(out Vector2 size, out float angle);
+                Vector3 p = self.transform.position;
+                var hits = Physics2D.OverlapBoxAll(new Vector2(p.x, p.y), size, angle, self.blockLayerMask.value);
+                if (hits == null) return false;
+                BoxCollider2D own = self.m_collider;
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    Collider2D c = hits[i];
+                    if (c == null) continue;
+                    if (own != null && c.Pointer == own.Pointer) continue;
+                    if (self.IsPlacementIgnoredCollider(c) || TerrainObject.IsHollowTriggerCollider(c)) continue;
+                    TerrainObject other = c.GetComponentInParent<TerrainObject>();
+                    if (other != null && other.Pointer != self.Pointer)
+                    {
+                        BLog.Debug($"stacking blocked: overlaps {other.name}");
+                        return true;
+                    }
+                }
+            }
+            catch (Exception e) { BLog.Error("stacking check failed", e); }
+            return false;
         }
 
         static void LevelPostfix(TerrainObject __instance)

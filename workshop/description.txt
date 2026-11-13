@@ -2,7 +2,8 @@
 Removes the building placement restrictions.
 
 [list]
-[*][b]Objects anywhere:[/b] furniture, stations, cooking hobs, planters and every other buildable object can be placed over other objects, walls and trees, and in protected story areas.
+[*][b]Objects anywhere:[/b] furniture, stations, cooking hobs, planters and every other buildable object can be placed against walls and trees, and in protected story areas.
+[*][b]Stacking (off by default):[/b] turn on Objects.AllowStacking to place objects on top of other objects.
 [*][b]Ignore floor level:[/b] drop objects even when the game says the floor is at a different level.
 [*][b]Walls anywhere:[/b] voxel walls, floors and stairs can be built through objects, trees and characters.
 [*][b]Horde mode:[/b] objects horde mode blocks can be built.

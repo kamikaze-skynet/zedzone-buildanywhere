@@ -2,7 +2,8 @@
 
 Removes the game's building placement restrictions.
 
-- **Objects anywhere.** Furniture, crafting stations, cooking hobs, planters and every other buildable object can be placed on top of or inside other objects, walls and trees, and inside the protected story areas. The preview is always shown as placeable.
+- **Objects anywhere.** Furniture, crafting stations, cooking hobs, planters and every other buildable object can be placed against walls and trees and inside the protected story areas.
+- **Stacking (off by default).** Turn on `Objects.AllowStacking` to also place objects on top of / overlapping other built objects.
 - **Ignore floor level.** Objects can be dropped even when the game says the floor under them is at a different level.
 - **Walls anywhere.** Voxel walls, floors and stairs can be built through objects, trees and characters, and in protected story areas.
 - **Horde mode.** Objects horde mode blocks from building can be built.
@@ -19,7 +20,7 @@ Materials are still used as normal. The wall tool's 32-block drag length and the
 - **Steam Workshop:** subscribe to Build Anywhere.
 - **Manually:** put `BuildAnywhere.dll` and `mod.json` in `%USERPROFILE%\AppData\LocalLow\LevenLiu\ZEDZONE\Mods\BuildAnywhere\`.
 
-`BepInEx\BuildAnywhere.log` should show `Build Anywhere 1.0.0 loaded.` and six `hook ... attached` lines.
+`BepInEx\BuildAnywhere.log` should show `Build Anywhere 1.1.0 loaded.` and six `hook ... attached` lines.
 
 ## Co-op
 
@@ -36,7 +37,8 @@ Materials are still used as normal. The wall tool's 32-block drag length and the
 |---|---|---|
 | `General.Enabled` | `true` | Turn the mod on or off. |
 | `General.HordeModeUnlockAll` | `true` | Allow objects that horde mode blocks. |
-| `Objects.IgnoreObstacles` | `true` | Place objects over other objects, walls, trees and in protected areas. |
+| `Objects.IgnoreObstacles` | `true` | Place objects against walls, trees and other obstacles and in protected areas. |
+| `Objects.AllowStacking` | `false` | Also allow objects on top of / overlapping other built objects. |
 | `Objects.IgnoreFloorLevel` | `true` | Place objects even when the floor under them is at a different level. |
 | `Walls.IgnoreObstacles` | `true` | Build walls through objects, trees, characters and in protected areas. |
 | `Debug.VerboseLog` | `false` | Extra detail in the log. |
