@@ -1,0 +1,7 @@
+{
+    "name": "Build Anywhere",
+    "version": "1.0.0",
+    "author": "girthy_mods",
+    "description": "Removes building placement restrictions: place objects and build walls anywhere.",
+    "enabled": true
+}

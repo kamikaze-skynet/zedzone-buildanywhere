@@ -1,0 +1,18 @@
+[h1]Build Anywhere[/h1]
+Removes the building placement restrictions.
+
+[list]
+[*][b]Objects anywhere:[/b] furniture, stations, cooking hobs, planters and every other buildable object can be placed over other objects, walls and trees, and in protected story areas.
+[*][b]Ignore floor level:[/b] drop objects even when the game says the floor is at a different level.
+[*][b]Walls anywhere:[/b] voxel walls, floors and stairs can be built through objects, trees and characters.
+[*][b]Horde mode:[/b] objects horde mode blocks can be built.
+[/list]
+Materials are still used as normal.
+
+[h2]Co-op[/h2]
+Everyone should install it, the host most of all: the host checks every wall a guest builds.
+
+[h2]Requirements[/h2]
+ZED ZONE Code Mod Loader (BepInEx 6 IL2CPP).
+
+Each feature can be turned off in BepInEx\config\girthy_mods.zedzone.buildanywhere.cfg.
