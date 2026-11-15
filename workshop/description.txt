@@ -17,3 +17,6 @@ Everyone should install it, the host most of all: the host checks every wall a g
 ZED ZONE Code Mod Loader (BepInEx 6 IL2CPP).
 
 Each feature can be turned off in BepInEx\config\girthy_mods.zedzone.buildanywhere.cfg.
+
+[h2]Settings and keys: Mod Menu[/h2]
+Press [b]F11[/b] in game to open [b]Mod Menu[/b] (Steam installs it with this mod) to change this mod's settings without editing files.
