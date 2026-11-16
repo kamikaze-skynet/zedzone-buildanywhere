@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+- Works with Mod Menu (F11): change this mod's settings in game. No gameplay change.
+- Same version number as on Girthy Mods.
+
 ## 1.1.0
 - New `Objects.AllowStacking` setting (off by default): objects can't overlap other built objects unless you turn it on. Walls, trees and protected areas are still ignored.
 

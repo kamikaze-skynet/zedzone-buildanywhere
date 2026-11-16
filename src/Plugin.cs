@@ -9,7 +9,7 @@ namespace BuildAnywhere
     public class Plugin : BasePlugin
     {
         public const string Guid = "girthy_mods.zedzone.buildanywhere";
-        public const string Version = "1.1.0";
+        public const string Version = "1.1.1";
 
         internal static ConfigEntry<bool> Enabled;
         internal static ConfigEntry<bool> ObjectsIgnoreObstacles;
