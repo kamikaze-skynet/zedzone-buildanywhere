@@ -13,8 +13,8 @@ Materials are still used as normal.
 [h2]Co-op[/h2]
 Everyone should install it, the host most of all: the host checks every wall a guest builds.
 
-[h2]Requirements[/h2]
-ZED ZONE Code Mod Loader (BepInEx 6 IL2CPP).
+[h2]Requires[/h2]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3834614258]ZED ZONE Code Mod Loader[/url] - run its install.cmd once, then start the game through Steam.
 
 Each feature can be turned off in BepInEx\config\girthy_mods.zedzone.buildanywhere.cfg.
 

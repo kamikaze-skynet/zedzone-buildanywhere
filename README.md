@@ -10,10 +10,10 @@ Removes the game's building placement restrictions.
 
 Materials are still used as normal. The wall tool's 32-block drag length and the world's height limit are built into the game code and are not changed.
 
-## Requirements
+## Requires
 
 - ZED ZONE (Windows, Steam)
-- [ZED ZONE Code Mod Loader](https://steamcommunity.com/sharedfiles/filedetails/?id=3834614258) (BepInEx 6 IL2CPP + ZedModsLoader). Run its `install.cmd` once.
+- [ZED ZONE Code Mod Loader](https://steamcommunity.com/sharedfiles/filedetails/?id=3834614258) - run its install.cmd once, then start the game through Steam.
 
 ## Install
 
